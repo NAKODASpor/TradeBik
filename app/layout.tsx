@@ -1,10 +1,5 @@
 import "./globals.css";
 
-export const metadata = {
-  title: "TradeBook",
-  description: "Jurnal & Kelas Trading",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -13,13 +8,8 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body>
-        <nav style={{ padding: '1rem', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <strong style={{ fontSize: '1.2rem' }}>TradeBook</strong>
-          <div>
-            <a href="/" style={{ marginRight: '15px', textDecoration: 'none', color: '#000' }}>Home</a>
-            <a href="/journal" style={{ marginRight: '15px', textDecoration: 'none', color: '#000' }}>Jurnal</a>
-            <a href="/courses" style={{ textDecoration: 'none', color: '#000' }}>Kelas</a>
-          </div>
+        <nav style={{ padding: '15px', borderBottom: '1px solid #eee' }}>
+          <strong>TradeBook</strong>
         </nav>
         {children}
       </body>
