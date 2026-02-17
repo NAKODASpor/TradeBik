@@ -6,12 +6,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id">
+    <html>
       <body>
-        <nav style={{ padding: '15px', borderBottom: '1px solid #eee' }}>
-          <strong>TradeBook</strong>
-        </nav>
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
