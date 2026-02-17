@@ -13,16 +13,16 @@ export default function Login() {
 
   const handleLogin = async () => {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
-    if (error) alert(error.message)
+    if (error) alert('Login Gagal: ' + error.message)
     else window.location.href = '/dashboard'
   }
 
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h2>Login</h2>
-      <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} style={{ display: 'block', margin: '10px auto' }} />
-      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} style={{ display: 'block', margin: '10px auto' }} />
-      <button onClick={handleLogin} style={{ padding: '10px 20px', background: 'green', color: 'white' }}>Masuk</button>
+    <div style={{ padding: '40px', textAlign: 'center', fontFamily: 'sans-serif' }}>
+      <h2>Login Member</h2>
+      <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} style={{ display: 'block', margin: '10px auto', padding: '10px' }} />
+      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} style={{ display: 'block', margin: '10px auto', padding: '10px' }} />
+      <button onClick={handleLogin} style={{ padding: '10px 20px', background: 'green', color: 'white', border: 'none', borderRadius: '5px' }}>Masuk Sekarang</button>
     </div>
   )
 }
